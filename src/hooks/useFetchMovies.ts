@@ -13,7 +13,7 @@ export const useFetchMovies = (query: Record<string, any>) => {
         setLoading(true);
         const result = await fetchMovies(query);
         setData(result);
-      } catch (error) {
+      } catch (error: any) {
         setError(error);
       } finally {
         setLoading(false);

@@ -3,7 +3,7 @@ import { useFetchMovies } from '../../hooks/useFetchMovies';
 import MovieCard from './MovieCard';
 import Pagination from '../common/Pagination';
 import Filter from '../common/Filter';
-import styles from '../styles/MovieList.module.scss';
+import styles from '../../styles/MovieList.module.scss';
 
 const MovieList: React.FC = () => {
   const [query, setQuery] = useState({ page: 1, 'vote_average.gte': 0, 'vote_average.lte': 10 });

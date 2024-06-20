@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from '../styles/Filter.module.scss';
+import styles from '../../styles/Filter.module.scss';
 
 interface FilterProps {
   onFilterChange: (filter: { 'vote_average.gte': number; 'vote_average.lte': number }) => void;
