@@ -1,26 +1,16 @@
-import { useState, useEffect } from 'react';
-import { fetchMovies } from '../utils/api';
+import { useQuery } from '@tanstack/react-query';
+
+import { api } from '../utils/api';
 import { MovieResponse } from '../types/Movie';
 
 export const useFetchMovies = (query: Record<string, any>) => {
-  const [data, setData] = useState<MovieResponse | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<Error | null>(null);
+  const instanse = api.instanse();
+  const fetchMovies = async()=>{
+    return (await instanse.get(`/discover/movie?include_adult=false&include_video=false&language=en-US&sort_by=popularity.desc`,{params:query})).data
+  }
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        setLoading(true);
-        const result = await fetchMovies(query);
-        setData(result);
-      } catch (error: any) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    getData();
-  }, [query]);
-
-  return { data, loading, error };
+  return useQuery<MovieResponse, Error>({
+    queryKey: ['movies', query],
+    queryFn: fetchMovies,
+  });
 };
