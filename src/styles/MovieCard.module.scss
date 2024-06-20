@@ -1,0 +1,18 @@
+.movieCard {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .poster {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+  
+  .details {
+    padding: 10px;
+  }
+  
