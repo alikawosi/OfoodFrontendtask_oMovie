@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 
+import { FilterProps } from '../../types';
 import styles from '../../styles/commons/Filter.module.scss';
-import { time } from 'console';
-
-interface FilterProps {
-  onFilterChange: (filter: { 'vote_average.gte': number; 'vote_average.lte': number; primary_release_year: number, year:number }) => void;
-}
 
 const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   const [minRating, setMinRating] = useState(0);
@@ -74,4 +70,4 @@ const Filter: React.FC<FilterProps> = ({ onFilterChange }) => {
   );
 };
 
-export default Filter;
+export  {Filter};

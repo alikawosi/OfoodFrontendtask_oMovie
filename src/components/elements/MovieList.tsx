@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
+import {MovieCardSkeleton,MovieCard} from './';
+import {Pagination, Filter} from '../commons';
 import { useFetchMovies } from '../../hooks/useFetchMovies';
-import Pagination from '../commons/Pagination';
-import Filter from '../commons/Filter';
-import MovieCardSkeleton from './MovieCardSkeleton';
-import MovieCard from './MovieCard';
 import styles from '../../styles/elements/MovieList.module.scss';
 
 const MovieList: React.FC = () => {
@@ -35,4 +33,4 @@ const MovieList: React.FC = () => {
   );
 };
 
-export default MovieList;
+export  {MovieList};

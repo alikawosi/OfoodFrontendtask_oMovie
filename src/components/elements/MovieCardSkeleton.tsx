@@ -1,6 +1,7 @@
 import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+
 import styles from '../../styles/elements/MovieCardSkeleton.module.scss';
 
 const MovieCardSkeleton: React.FC = () => {
@@ -16,4 +17,4 @@ const MovieCardSkeleton: React.FC = () => {
   );
 };
 
-export default MovieCardSkeleton;
+export  {MovieCardSkeleton};

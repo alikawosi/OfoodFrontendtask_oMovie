@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #4b0082; /* Darker purple */
+    padding: 10px;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

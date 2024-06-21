@@ -1,15 +1,23 @@
 import React from 'react';
-import { Movie } from '../../types/Movie';
-import styles from '../../styles/elements/MovieCard.module.scss';
+import { useNavigate } from 'react-router-dom';
+
+import { Movie } from '../../types';
 import { PostersInfo } from '../../constants';
+import styles from '../../styles/elements/MovieCard.module.scss';
 
 
 interface MovieCardProps {
   movie: Movie;
 }
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/movie/${movie.id}`);
+  };
+
   return (
-    <div className={styles.movieCard}>
+    <div id={movie.id} className={styles.movieCard} onClick={handleClick}>
       <img src={ PostersInfo.url +`/${PostersInfo.size}` + movie.poster_path} alt={movie.title} loading="lazy" className={styles.poster} />
       <div className={styles.details}>
         <h3>{movie.title}</h3>
@@ -20,4 +28,4 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   );
 };
 
-export default MovieCard;
+export  {MovieCard};

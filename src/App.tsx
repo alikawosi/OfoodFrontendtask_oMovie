@@ -1,10 +1,11 @@
 import React from 'react';
-import {QueryClient, QueryClientProvider,
-} from '@tanstack/react-query'
-import MovieList from './components/elements/MovieList';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import './App.css';
+import  './App.module.scss';
 import { api } from './utils';
+import Home from './components/pages/home/HomePage';
+import MovieInfo from './pages/movieInfo/MovieInfo';
 
 api.init()
 // Create a client
@@ -12,12 +13,13 @@ const queryClient = new QueryClient({defaultOptions: {queries: {retry: 4}}})
 
 const App:React.FC = () =>{
   return (
-    // Provide the client to your App
     <QueryClientProvider client={queryClient}>
-      <div>
-        <h1>Movie Explorer</h1>
-        <MovieList />
-      </div>
+      <Router>
+        <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/movie/:id' element={<MovieInfo/>} />
+        </Routes>    
+      </Router>
     </QueryClientProvider>
   );
 }

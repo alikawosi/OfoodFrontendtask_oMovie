@@ -1,11 +1,8 @@
 import React from 'react';
+
+import { PaginationProps } from '../../types';
 import styles from '../../styles/commons/Pagination.module.scss';
 
-interface PaginationProps {
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
-}
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPageChange }) => {
   const createPageArray = () => {
@@ -37,4 +34,4 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
   );
 };
 
-export default Pagination;
+export  {Pagination};
