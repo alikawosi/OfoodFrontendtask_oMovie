@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import  './App.module.scss';
 import { api } from './utils';
-import Home from './components/pages/home/HomePage';
+import Home from './pages/home/HomePage';
 import MovieInfo from './pages/movieInfo/MovieInfo';
 
 api.init()
