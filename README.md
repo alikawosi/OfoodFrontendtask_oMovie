@@ -6,7 +6,7 @@ OMovie is a React-based web application for exploring movies. It fetches movie d
 
 - **Movie List**: Display a list of movies with pagination and filtering options.
 - **Movie Details**: View detailed information about a selected movie.
-- **Responsive Design**: Ensures usability across various devices.
+- **Responsive Design & SCSS Styling**: Ensures usability across various devices and using SCSS for styling.
 - **Typescript**: Using Typescript for development.
 - **Online & Live!**: Project Deployed with vercel  and it is accessible with https://omovie.vercel.app/ .
 - **Lazy loading & Query String**:Lazy loading and query string for filtering handled by React Query .
