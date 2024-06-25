@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { PaginationProps } from '../../types';
+import { Button } from './';
+
 import styles from '../../styles/commons/Pagination.module.scss';
 
 
@@ -19,17 +21,17 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, onPage
 
   return (
     <div className={styles.pagination}>
-      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</button>
+      <Button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>Prev</Button>
       {createPageArray().map((page, index) => (
-        <button
+        <Button
           key={index}
           className={currentPage === page ? styles.active : ''}
           onClick={() => typeof page === 'number' && onPageChange(page)}
         >
           {page}
-        </button>
+        </Button>
       ))}
-      <button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>Next</button>
+      <Button onClick={() => onPageChange(currentPage + 1)} disabled={currentPage === totalPages}>Next</Button>
     </div>
   );
 };

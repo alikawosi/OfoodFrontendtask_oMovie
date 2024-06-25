@@ -1,0 +1,67 @@
+.movieInfoContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.movieInfo {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+.poster {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.details {
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .movieInfo {
+    flex-direction: row;
+  }
+
+  .poster {
+    width: 300px;
+    height: 450px;
+    margin-right: 20px;
+  }
+
+  .details {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .movieInfo {
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+  }
+
+
+  .details {
+    flex: 1;
+  }
+}

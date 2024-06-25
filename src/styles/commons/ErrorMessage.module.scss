@@ -1,0 +1,20 @@
+.errorMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    font-size: 200px;
+  }
+  
+  .message {
+    flex: 1;
+    font-size: 32px;
+  }
+  

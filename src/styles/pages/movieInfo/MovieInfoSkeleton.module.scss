@@ -1,0 +1,59 @@
+.movieInfoSkeleton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  }
+  
+  .poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+  }
+
+
+@media (min-width: 768px) {
+  .movieInfoSkeleton {
+    flex-direction: row;
+  }
+
+  .poster {
+    width: 300px;
+    height: 450px; 
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .details {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .movieInfoSkeleton {
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+  }
+
+  .poster {
+    width: 300px;
+    height: 450px; 
+    margin: 20px 0;
+  }
+
+  .details {
+    flex: 1;
+  }
+}
+  

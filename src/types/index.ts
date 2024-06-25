@@ -1,3 +1,5 @@
 export* from './Movie'
 export* from './Filter'
 export* from './Pagination'
+export* from './Button'
+export* from './Error'
