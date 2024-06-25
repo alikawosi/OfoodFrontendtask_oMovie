@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Movie } from '../../types';
+import { Movie } from '../../types/commons';
 import { PostersInfo } from '../../constants';
 import styles from '../../styles/elements/MovieCard.module.scss';
 

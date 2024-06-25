@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Movie } from '../../types';
+import { Movie } from '../../types/commons';
 import {MovieCardSkeleton,MovieCard} from './';
 import styles from '../../styles/elements/MovieList.module.scss';
 

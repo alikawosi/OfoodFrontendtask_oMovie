@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
-import { MovieResponse } from '../../types';
+import { MovieResponse } from '../../types/commons';
 import { Filter, Layout, Pagination } from '../../components/commons';
 import { MovieList } from '../../components/elements';
 

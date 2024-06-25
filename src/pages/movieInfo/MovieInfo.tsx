@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 
-import { Movie } from '../../types';
+import { Movie } from '../../types/commons';
 import { PostersInfo } from '../../constants';
 import {ErrorMessage, Layout} from '../../components/commons';
 import MovieInfoSkeleton from '../../components/pages/movieInfo/MovieInfoSkeleton';

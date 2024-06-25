@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Error } from '../../types';
+import { Error } from '../../types/commons';
 import styles from '../../styles/commons/ErrorMessage.module.scss';
 
 

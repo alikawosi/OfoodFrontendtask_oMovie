@@ -1,4 +1,4 @@
-export* from './Movie'
+export* from '../elements/Movie'
 export* from './Filter'
 export* from './Pagination'
 export* from './Button'

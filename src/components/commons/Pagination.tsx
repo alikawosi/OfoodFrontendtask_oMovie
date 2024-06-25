@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PaginationProps } from '../../types';
+import { PaginationProps } from '../../types/commons';
 import { Button } from './';
 
 import styles from '../../styles/commons/Pagination.module.scss';

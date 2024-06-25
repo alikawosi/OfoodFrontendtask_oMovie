@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { FilterProps } from '../../types';
+import { FilterProps } from '../../types/commons';
 import { Button } from './';
 
 import styles from '../../styles/commons/Filter.module.scss';

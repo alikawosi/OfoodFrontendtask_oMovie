@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ButtonProps } from '../../types';
+import { ButtonProps } from '../../types/commons';
 import styles from '../../styles/commons/Button.module.scss';
 
 
